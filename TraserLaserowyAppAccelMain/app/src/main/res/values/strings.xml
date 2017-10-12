@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TraserLaserowyAppAccelMain</string>
+    <string name="xeq">X =</string>
+    <string name="yeq">Y =</string>
+    <string name="dash">- - -</string>
+    <string name="togoff">Sensor wyłączony Włącz</string>
+    <string name="togon">Sensor włączony Wyłącz</string>
+    <string name="connard">Połącz z  Arduino</string>
+    <string name="connstat">Status połączenia\n ze zdalnym strerowaniem:</string>
+    <string name="connstatard">Status połączenia\n z Arduino:</string>
+    <string name="dot">...</string>
+    <string name="sparowane">Sparowane urządzenia</string>
+    <string name="cantconn">Nie można połączyć  z %1$s</string>
+    <string name="conned">Połączono z: %1$s</string>
+    <string name="notconn">Not connected.</string>
+    <string name="wyczysc">Wyczyść kalibrację</string>
+    <string name="cancel">Cofnij</string>
+    <string name="zapisz">Kalibruj</string>
+    <string name="czy_kalibracj">Czyść kalibrację</string>
+    <string name="kalibracja">Kalibracja</string>
+    <string name="_3">3</string>
+
+</resources>
