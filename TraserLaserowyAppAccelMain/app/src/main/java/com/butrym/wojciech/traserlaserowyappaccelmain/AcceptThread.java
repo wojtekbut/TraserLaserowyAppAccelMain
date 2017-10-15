@@ -20,16 +20,16 @@ class AcceptThread extends Thread {
     private static final UUID MY_UUID =
             UUID.fromString("fa87c0d0-afac-11de-8a39-0800200c9a66");
     private BluetoothServerSocket mmServerSocket;
-    public BluetoothDevice mDevice;
-    protected InputStream mmInStream;
-    protected OutputStream mmOutStream;
-    protected BluetoothSocket socket;
-    protected Handler mhandler;
+    BluetoothDevice mDevice;
+    InputStream mmInStream;
+    OutputStream mmOutStream;
+    BluetoothSocket socket;
+    Handler mhandler;
     private String state;
 
-    public AcceptThread(){}
+    AcceptThread(){}
 
-    public AcceptThread(Handler handler) {
+    AcceptThread(Handler handler) {
         mhandler = handler;
         BluetoothServerSocket tmp = null;
         BluetoothAdapter mAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -82,7 +82,7 @@ class AcceptThread extends Thread {
         }
     }
 
-    public void writebs(String rozkaz, byte[] bity) {
+    void writebs(String rozkaz, byte[] bity) {
         String poczatek, koniec;
         byte[] bpoczatek, bkoniec, brozkaz, wiadomosc;
         poczatek = "stArt:";
@@ -118,7 +118,7 @@ class AcceptThread extends Thread {
     }
 
 
-    public void writebs(String rozkaz, String string) {
+    void writebs(String rozkaz, String string) {
         String poczatek, koniec;
         byte[] bpoczatek, bkoniec, brozkaz, bstring, wiadomosc;
         poczatek = "stArt:";
@@ -154,7 +154,7 @@ class AcceptThread extends Thread {
         write(wiadomosc);
     }
 
-    protected void czytaj() {
+    void czytaj() {
         byte[] buffer = new byte[2];
         byte[] poczatek = new byte[6];
         byte dlrozkazu;
@@ -245,7 +245,7 @@ class AcceptThread extends Thread {
         }
     }
 
-    public void cancel() {
+    void cancel() {
         try {
             socket.close();
         } catch (IOException e) {

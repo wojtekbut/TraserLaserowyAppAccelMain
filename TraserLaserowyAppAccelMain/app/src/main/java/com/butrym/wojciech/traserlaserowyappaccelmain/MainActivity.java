@@ -80,7 +80,7 @@ public class MainActivity extends Activity implements SensorEventListener, Compo
                     status.setText(text);
                     break;
                 case 2: // połączyłem mirror
-                    status.setText(text + mirror.mDevice.getName());
+                    status.setText(String.format("%s%s", text, mirror.mDevice.getName()));
                     if (polaczenie != null) {
                         mirror.writebs("ARDUINO:", "Polaczony z " + polaczenie.mmDevice.getName());
                     } else {
@@ -105,7 +105,7 @@ public class MainActivity extends Activity implements SensorEventListener, Compo
                         }
                     } else if (text.equals("ConnectThread")) {
                         try {
-                            statusard.setText("rozłączony");
+                            statusard.setText(R.string.rozlaczony);
                             polaczenie.cancel();
                             polaczenie = null;
                             arduino.setEnabled(true);
@@ -342,10 +342,7 @@ public class MainActivity extends Activity implements SensorEventListener, Compo
                         return;
                     }
                 });
-                builder.setMessage("Aby skalibrować urządzenie,\npołóż je na poziomej powierzchni.\n" +
-                        "a następnie kliknij przycisk \"Kalibruj\".\n" +
-                         "Urządzenie odczeka 3 sekundy, aby zniwelować drgania,\n" +
-                         "a następnie zapisze dane kalibracyjne.");
+                builder.setMessage(R.string.calibques);
                 AlertDialog dialog = builder.create();
                 dialog.show();
             }
@@ -364,7 +361,7 @@ public class MainActivity extends Activity implements SensorEventListener, Compo
                         return;
                     }
                 });
-                builder.setMessage("Usunąć kalibrację?\nAby ponownie skalibrować urządzenie,\npotrzebna jest idealnie pozioma powierzchnia.");
+                builder.setMessage(R.string.resetcalques);
                 AlertDialog dialog = builder.create();
                 dialog.show();
             }

@@ -19,5 +19,13 @@
     <string name="czy_kalibracj">Czyść kalibrację</string>
     <string name="kalibracja">Kalibracja</string>
     <string name="_3">3</string>
+    <string name="rozlaczony">rozłączony</string>
+    <string name="resetcalques">Usunąć kalibrację? Aby ponownie skalibrować urządzenie, \npotrzebna jest idealnie pozioma powierzchnia.</string>
+    <string name="calibques">Aby skalibrować urządzenie,\n" +
+                        "połóż je na poziomej powierzchni.\n" +
+                        "a następnie kliknij przycisk \"Kalibruj\".\n" +
+                         "Urządzenie odczeka 3 sekundy, aby zniwelować drgania,\n" +
+                         "a następnie zapisze dane kalibracyjne.</string>
+    <string name="brsparurz">Brak sparowanych urządzeń.</string>
 
 </resources>

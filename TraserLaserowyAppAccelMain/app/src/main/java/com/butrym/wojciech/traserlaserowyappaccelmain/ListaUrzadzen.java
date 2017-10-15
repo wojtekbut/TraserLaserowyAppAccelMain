@@ -42,7 +42,7 @@ public class ListaUrzadzen extends Activity {
                 sparowaneUrzadzeniaArray.add(device.getName() + "\n" + device.getAddress());
             }
         } else {
-            String noDevices = "Brak sparowanych urządzeń.";
+            String noDevices = getString(R.string.brsparurz);
             sparowaneUrzadzeniaArray.add(noDevices);
         }
     }

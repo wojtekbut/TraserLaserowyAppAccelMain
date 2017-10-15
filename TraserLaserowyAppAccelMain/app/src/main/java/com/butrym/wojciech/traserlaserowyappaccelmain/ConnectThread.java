@@ -12,9 +12,9 @@ import java.util.UUID;
 
 class ConnectThread extends AcceptThread {
 
-    public final BluetoothDevice mmDevice;
+    final BluetoothDevice mmDevice;
 
-    public ConnectThread(BluetoothDevice device, Handler handler) {
+    ConnectThread(BluetoothDevice device, Handler handler) {
         mmDevice = device;
         mhandler = handler;
         BluetoothSocket tmp = null;
